@@ -23,25 +23,25 @@
             android:summaryOn="@string/pref_download_deltas_summary_on"
             android:title="@string/pref_download_deltas" />
         <ListPreference
-            android:defaultValue="-1"
+            android:defaultValue="86400000"
             android:key="PREFERENCE_BACKGROUND_UPDATE_INTERVAL"
             android:title="@string/pref_background_update_interval"
             android:entries="@array/updateIntervalLabels"
             android:entryValues="@array/updateIntervalValues" />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="PREFERENCE_BACKGROUND_UPDATE_DOWNLOAD"
             android:summaryOff="@string/pref_background_update_download_summary_off"
             android:summaryOn="@string/pref_background_update_download_summary_on"
             android:title="@string/pref_background_update_download" />
         <CheckBoxPreference
             android:dependency="PREFERENCE_BACKGROUND_UPDATE_DOWNLOAD"
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="PREFERENCE_BACKGROUND_UPDATE_WIFI_ONLY"
             android:title="@string/pref_background_update_wifi_only" />
         <CheckBoxPreference
             android:dependency="PREFERENCE_BACKGROUND_UPDATE_DOWNLOAD"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="PREFERENCE_BACKGROUND_UPDATE_INSTALL"
             android:summaryOff="@string/pref_background_update_install_summary_off"
             android:summaryOn="@string/pref_background_update_install_summary_on"
@@ -66,7 +66,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_category_installation">
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:dependency="PREFERENCE_DOWNLOAD_INTERNAL_STORAGE"
             android:key="PREFERENCE_AUTO_INSTALL"
             android:summaryOff="@string/pref_auto_install_summary_off"
@@ -119,7 +119,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_category_ui">
         <ListPreference
-            android:defaultValue="none"
+            android:defaultValue="dark"
             android:key="PREFERENCE_UI_THEME"
             android:title="@string/pref_ui_theme"
             android:entries="@array/uiThemeLabels"
@@ -133,7 +133,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_category_third_party">
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="PREFERENCE_EXODUS"
             android:title="@string/pref_exodus"
             android:summaryOff="@string/pref_exodus_summary_off"
