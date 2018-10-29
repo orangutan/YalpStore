@@ -108,7 +108,7 @@ public abstract class InstallerAbstract {
         }
         if (!new ApkSignatureVerifier(context).match(app.getPackageName(), apkPath)) {
             Log.w(getClass().getSimpleName(), "Signature mismatch for " + app.getPackageName());
-            notifySignatureMismatch(app);
+            //notifySignatureMismatch(app);
             return false;
         }
         return true;
