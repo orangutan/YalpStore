@@ -26,7 +26,7 @@ $(yalpstore_root)/$(yalpstore_dir)/$(yalpstore_apk):
 	ln -s $(yalpstore_out) $(yalpstore_build)
 	echo "sdk.dir=$(ANDROID_HOME)" > $(yalpstore_root)/local.properties
 	cd $(yalpstore_root) && git submodule update --recursive --init
-	cd $(yalpstore_root)/$(yalpstore_dir) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ../gradlew assembleContemporary
+	cd $(yalpstore_root)/$(yalpstore_dir) && JAVA_TOOL_OPTIONS="$(JAVA_TOOL_OPTIONS) -Dfile.encoding=UTF8" ../gradlew clean assembleContemporary
 
 LOCAL_CERTIFICATE := platform
 LOCAL_SRC_FILES := $(yalpstore_dir)/$(yalpstore_apk)
